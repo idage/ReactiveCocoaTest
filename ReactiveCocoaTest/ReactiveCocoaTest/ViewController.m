@@ -44,6 +44,12 @@
         NSLog(@"触发自定义视图的代理方法了");
 
     }];
+    
+    [testView.delegateSignal subscribeNext:^(id x) {
+        NSLog(@"--%@----",x);
+    }];
+    
+    
     //例子3 监听通知事件
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"testNotification" object:nil] subscribeNext:^(id x) {
         NSLog(@"接收到testNotification通知了");

@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ReactiveCocoa.h"
+
+
 @interface TestView : UIView
+
+@property (nonatomic, strong) RACSubject *delegateSignal;
 
 @end
